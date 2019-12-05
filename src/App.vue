@@ -83,4 +83,41 @@ footer {
 .active:hover {
   bottom: 15%;
 }
+
+
+
+
+.menu-box {
+  transform: translateX(-400%);
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+  width: 200px;
+  height: 250px;
+  bottom: 10%;
+  border-radius: 10px;
+  background-color: #1b1638;
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.40);
+  transition: 0.3s;
+}
+.menu-box a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.menu-box a:first-child {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.menu-box a:hover {
+  color: #1b1638;
+  background-color: #fff;
+}
+
+.isOpen {
+  transform: translateX(0%);
+}
 </style>

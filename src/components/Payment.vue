@@ -42,9 +42,15 @@
 				<button class="active"><a href="payment"><img src="../../assets/SVG/cubeAsset.svg" width="50" height="50"></a></button>
 				<div></div>
 				<button><a href="coins"><img src="../../assets/SVG/statistics.svg" width="26" height="26"></a></button>
-				<button><img src="../../assets/SVG/more.svg" width="26" height="26"></button>
+				<button v-on:click="showMenu"><img src="../../assets/SVG/more.svg" width="26" height="26"></button>
 			</div>
 		</footer>
+
+
+		<div :class="{ isOpen }" class="menu-box">
+			<a href="sendmoney">Send Money</a>
+			<a href="expenses">Expenses</a>
+		</div>
 
 	</div>
 </template>
@@ -59,7 +65,13 @@ export default {
 			number: json.number,
 			name: json.name,
 			expires: json.expires,
-			cvc: json.cvc
+			cvc: json.cvc,
+			isOpen: false
+		}
+	},
+	methods: {
+		showMenu: function() {
+			this.isOpen = !this.isOpen
 		}
 	}
 };
